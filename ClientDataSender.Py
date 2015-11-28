@@ -1,16 +1,13 @@
 import socket
-
 PORT = 50001
-
 files = {
-        "File1" : "The quick brown fox jumped over the lazy dogs" ,
-        "File2" : "If a woodchuck could chuck wood" ,
-        "File3" : "Now you're just showing off" ,
+        "File1" : "====================" ,
+        "File2" : "====================" ,
+        "File3" : "====================" ,
         }
-
-
+        
 for i in files:
-    s = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(('127.0.0.1', PORT))
     s.send("SAVE")
     s.send(i)
